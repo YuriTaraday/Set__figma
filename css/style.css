@@ -27,7 +27,6 @@ body {
 .page {
   flex: 1 1 auto;
 }
-
 .header {
   position: fixed;
   width: 100%;
@@ -108,7 +107,6 @@ body {
   display: flex;
   justify-content: flex-end;
   column-gap: 35px;
-  flex-wrap: wrap;
 }
 .menu__link {
   display: block;
@@ -187,6 +185,9 @@ body {
 .button:hover {
   background-color: #1a00ad;
 }
+.button__grey {
+  background-color: rgba(129, 129, 139, 0.2);
+}
 
 @media (max-width: 999.98px) {
   .button {
@@ -227,6 +228,48 @@ body {
     cursor: pointer;
     fill: #ff6d35;
     transition: all 0.3s ease-in-out;
+  }
+}
+.main {
+  padding-top: 160px;
+}
+.main__container {
+  display: flex;
+  gap: 32px;
+}
+.main__content {
+  flex: 0 1 50%;
+}
+.main__images {
+  flex: 0 1 50%;
+}
+
+.images-main {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.images-main__column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.images-main__item {
+  border-radius: 50%/29%;
+  overflow: hidden;
+}
+.images-main__item img {
+  max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .main {
+    padding-top: 120px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main {
+    padding-top: 90px;
   }
 }
 

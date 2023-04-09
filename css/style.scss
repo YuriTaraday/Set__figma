@@ -27,6 +27,8 @@ body {
 
 .page {
   flex: 1 1 auto;
+  &__main {
+  }
 }
 
 .header {
@@ -137,7 +139,6 @@ body {
     display: flex;
     justify-content: flex-end;
     column-gap: 35px;
-    flex-wrap: wrap;
   }
 
   // .menu__item
@@ -231,6 +232,10 @@ body {
   &:hover {
     background-color: rgb(26, 0, 173);
   }
+
+  &__grey {
+    background-color: rgba(129, 129, 139, 0.2);
+  }
 }
 
 @media (max-width: 999.98px) {
@@ -276,5 +281,65 @@ body {
       fill: #ff6d35;
       transition: all 0.3s ease-in-out;
     }
+  }
+}
+
+.main {
+  padding-top: 160px;
+  &__container {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__content {
+    flex: 0 1 50%;
+  }
+
+  &__title {
+  }
+
+  &__text {
+  }
+
+  &__actions {
+  }
+
+  &__button {
+  }
+
+  &__images {
+    flex: 0 1 50%;
+  }
+}
+
+.images-main {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__item {
+    border-radius: 50% / 29%;
+    overflow: hidden;
+  }
+
+  &__item img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main {
+    padding-top: 90px;
   }
 }
