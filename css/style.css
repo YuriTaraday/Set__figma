@@ -89,7 +89,7 @@ body {
     position: fixed;
     top: 0;
     left: -100%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     z-index: 2;
     transition: left 0.3s ease 0s;
   }
@@ -169,8 +169,7 @@ body {
 .button {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.43;
-  /* 22/14 */
+  line-height: 1.43; /* 22/14 */
   padding: 16px 30px;
   /* or 160% */
   display: inline-block;
@@ -183,7 +182,7 @@ body {
   border-radius: 50px;
 }
 .button:hover {
-  background-color: #1a00ad;
+  background-color: rgb(26, 0, 173);
 }
 .button__grey {
   background-color: rgba(129, 129, 139, 0.2);
@@ -203,17 +202,16 @@ body {
 }
 @media (max-width: 999.98px) {
   .header__container,
-.menu__list {
+  .menu__list {
     column-gap: 25px;
   }
 }
 @media (max-width: 767.98px) {
   .header__container,
-.menu__list {
+  .menu__list {
     column-gap: 10px;
     justify-content: space-between;
   }
-
   .icon-menu {
     display: block;
     flex: 0 0 30px;
@@ -239,9 +237,66 @@ body {
 }
 .main__content {
   flex: 0 1 50%;
+  align-self: center;
+}
+.main__title {
+  font-weight: 500;
+  font-size: 51.2px;
+  line-height: 1.19; /* 61/51 */
+  color: #fff;
+  max-width: 510px;
+  position: relative;
+}
+.main__title::before {
+  content: "";
+  background: url(../img/main/decor.svg) 0 0/100% no-repeat;
+  width: 122px;
+  height: 122px;
+  position: absolute;
+  top: -15px;
+  left: -34px;
+}
+.main__title:not(:last-child) {
+  margin-bottom: 28px;
+}
+.main__text {
+  max-width: 500px;
+}
+.main__text:not(:last-child) {
+  margin-bottom: 33px;
+}
+.main__actions {
+  display: flex;
+  gap: 32px;
 }
 .main__images {
   flex: 0 1 50%;
+}
+@media screen and (max-width: 991.98px) {
+  .main__title {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .main__title {
+    font-size: 32px;
+  }
+  .main__container {
+    flex-direction: column;
+  }
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.text {
+  line-height: 150%;
+}
+.text__big {
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .images-main {
@@ -257,6 +312,18 @@ body {
 .images-main__item {
   border-radius: 50%/29%;
   overflow: hidden;
+}
+.images-main__item__1 {
+  border-radius: 50%/30%;
+}
+.images-main__item__2 {
+  border-radius: 50% 50% 0 50%;
+}
+.images-main__item__3 {
+  border-radius: 50% 0 50% 50%;
+}
+.images-main__item__4 {
+  border-radius: 50%/30%;
 }
 .images-main__item img {
   max-width: 100%;

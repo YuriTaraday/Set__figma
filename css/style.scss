@@ -293,15 +293,40 @@ body {
 
   &__content {
     flex: 0 1 50%;
+    align-self: center;
   }
 
   &__title {
+    font-weight: 500;
+    font-size: 51.2px;
+    line-height: 1.19; /* 61/51 */
+    color: #fff;
+    max-width: 510px;
+    position: relative;
+    &::before {
+      content: "";
+      background: url(../img/main/decor.svg) 0 0 / 100% no-repeat;
+      width: 122px;
+      height: 122px;
+      position: absolute;
+      top: -15px;
+      left: -34px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
   }
 
   &__text {
+    max-width: 500px;
+    &:not(:last-child) {
+      margin-bottom: 33px;
+    }
   }
 
   &__actions {
+    display: flex;
+    gap: 32px;
   }
 
   &__button {
@@ -309,6 +334,33 @@ body {
 
   &__images {
     flex: 0 1 50%;
+  }
+
+  @media screen and (max-width: 991.98px) {
+    &__title {
+      font-size: 44px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &__title {
+      font-size: 32px;
+    }
+    &__container {
+      flex-direction: column;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.text {
+  line-height: 150%;
+  &__big {
+    font-weight: 300;
+    font-size: 18px;
   }
 }
 
@@ -325,6 +377,18 @@ body {
   &__item {
     border-radius: 50% / 29%;
     overflow: hidden;
+    &__1 {
+      border-radius: 50% / 30%;
+    }
+    &__2 {
+      border-radius: 50% 50% 0 50%;
+    }
+    &__3 {
+      border-radius: 50% 0 50% 50%;
+    }
+    &__4 {
+      border-radius: 50% / 30%;
+    }
   }
 
   &__item img {
