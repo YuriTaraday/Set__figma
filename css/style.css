@@ -8,7 +8,7 @@ body {
   height: 100%;
   font-weight: 300;
   background-color: #0d0d11;
-  color: #9c9c9c;
+  color: #81818B;
 }
 
 [class*=__container] {
@@ -32,6 +32,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 50;
   background-color: rgba(13, 13, 17, 0.522);
 }
 .header__container {
@@ -230,6 +231,7 @@ body {
 }
 .main {
   padding-top: 160px;
+  padding-bottom: 100px;
 }
 .main__container {
   display: flex;
@@ -267,7 +269,9 @@ body {
 }
 .main__actions {
   display: flex;
-  gap: 32px;
+  column-gap: 32px;
+  row-gap: 15px;
+  align-items: stretch;
 }
 .main__images {
   flex: 0 1 50%;
@@ -281,6 +285,12 @@ body {
   .main__title {
     font-size: 32px;
   }
+  .main__title:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .main__text:not(:last-child) {
+    margin-bottom: 15px;
+  }
   .main__container {
     flex-direction: column;
   }
@@ -290,6 +300,14 @@ body {
     align-items: center;
   }
 }
+@media screen and (max-width: 497.98px) {
+  .main__content {
+    align-items: stretch;
+  }
+  .main__actions {
+    flex-direction: column;
+  }
+}
 
 .text {
   line-height: 150%;
@@ -297,6 +315,7 @@ body {
 .text__big {
   font-weight: 300;
   font-size: 18px;
+  color: #9C9C9C;
 }
 
 .images-main {
@@ -332,11 +351,13 @@ body {
 @media (max-width: 991.98px) {
   .main {
     padding-top: 120px;
+    padding-bottom: 60px;
   }
 }
 @media (max-width: 767.98px) {
   .main {
     padding-top: 90px;
+    padding-bottom: 30px;
   }
 }
 
