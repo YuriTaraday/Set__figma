@@ -374,6 +374,48 @@ body {
   }
 }
 
+.header-main {
+  &__label {
+    display: inline-block;
+    border: 1px solid rgba(129, 129, 139, 0.2);
+    border-radius: 12px;
+    padding: 11px 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all ease 0.3s;
+
+    &:hover {
+      background-color: #3b3c3d;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 51.2px;
+    line-height: 1.19;
+    color: #fff;
+    max-width: 510px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 500px;
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+}
+
 .text {
   color: #81818b;
   line-height: 150%;
@@ -512,9 +554,6 @@ body {
     }
   }
 
-  &__header {
-  }
-
   &__title {
     font-weight: 500;
     font-size: 51.2px;
@@ -564,6 +603,10 @@ body {
     &__container {
       flex-direction: column;
     }
+    &__title,
+    &__text {
+      max-width: none;
+    }
   }
 
   @media (max-width: 991.98px) {
@@ -584,6 +627,11 @@ body {
     &__items {
       flex-direction: column;
       gap: 32px;
+    }
+    &__column {
+      &:first-child {
+        padding-top: 0px;
+      }
     }
   }
 }
@@ -618,5 +666,71 @@ body {
   }
 
   @media (max-width: 767.98px) {
+  }
+}
+
+.why {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__container {
+    display: flex;
+    gap: 64px;
+  }
+
+  &__images {
+    flex: 0 1 50%;
+  }
+
+  &__content {
+    flex: 0 1 50%;
+    align-self: center;
+  }
+
+  &__header {
+  }
+
+  @media (max-width: 991.98px) {
+    & {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    & {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.images-why {
+  display: flex;
+  position: relative;
+  &__item {
+    overflow: hidden;
+    &_1 {
+      border-radius: 90% 0 50% 50% / 50% 0 30% 30%;
+      &::before {
+        content: "";
+        background: url(../img/main/decor.svg) 0 0 / 100% no-repeat;
+        width: 122px;
+        height: 122px;
+        position: absolute;
+        bottom: 0;
+        left: -10;
+        z-index: -1;
+      }
+    }
+
+    &_2 {
+      border-radius: 50% 50% 50% 0;
+      align-self: flex-end;
+    }
+  }
+
+  &__item img {
+    max-width: 100%;
+    display: block;
   }
 }
