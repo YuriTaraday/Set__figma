@@ -350,6 +350,29 @@ body {
 .header-main__text:not(:last-child) {
   margin-bottom: 35px;
 }
+.header-main__list li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 32px;
+  padding-left: 40px;
+  color: #9c9c9c;
+  line-height: 1.5;
+}
+.header-main__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background: url("/img/why/li.svg") center no-repeat;
+  background-color: rgba(129, 129, 139, 0.1);
+  width: 32px;
+  height: 32px;
+}
+.header-main__list li:not(:last-child) {
+  margin-bottom: 16px;
+}
 
 .text {
   color: #81818b;
@@ -579,11 +602,15 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+  .why__container {
+    flex-direction: column-reverse;
+  }
 }
 
 .images-why {
   display: flex;
   position: relative;
+  align-self: flex-end;
 }
 .images-why__item {
   overflow: hidden;
@@ -597,8 +624,8 @@ body {
   width: 122px;
   height: 122px;
   position: absolute;
-  bottom: 0;
-  left: -10;
+  bottom: -10px;
+  left: 0;
   z-index: -1;
 }
 .images-why__item_2 {
