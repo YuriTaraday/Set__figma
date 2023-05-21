@@ -25,7 +25,7 @@
     "open-browser-webpack-plugin": "0.0.5"
   },
   "scripts": {
-    "start": "parcel",
+    "start": "parcel --open",
     "build": "parcel build"
   },
   "repository": {
